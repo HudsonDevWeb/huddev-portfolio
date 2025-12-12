@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  /*Cores - Landing Page*/
   --color-background: #0F0F0F;
   --color-foreground: #F4F4F4;
   --color-muted-foreground: #999999;
@@ -21,6 +22,9 @@
   --color-border: #2D2D2D;
   --color-input: #2D2D2D;
   --color-ring: #CCCCCC;
+
+   /*Cores - Qr Link*/
+   --color-qrbackground: #ECEFF3;
 }
 
 
