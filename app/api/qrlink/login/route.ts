@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { generateToken } from "@/app/lib/tokenGenerator";
 
 export async function POST(request: Request) {
   const { email, password } = await request.json();
@@ -7,7 +8,8 @@ export async function POST(request: Request) {
   const adminPassword = process.env.QRLINK_PASSWORD;
 
   if (email === adminEmail && password === adminPassword) {
-    return NextResponse.json({ success: true });
+    const token = generateToken();
+    return NextResponse.json({ success: true, token: `Bearer ${token}` }, { status: 200 });
   }
 
   return NextResponse.json(

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { showToast } from "@/app/lib/toast-utils";
 
@@ -39,13 +39,11 @@ const QrLogin = () => {
                 return;
             }
 
-            localStorage.setItem("qrlogin-auth", "true");
+            cookieStore.set("token", data.token);
 
-            showToast("Login realizado com sucesso!","success")
+            showToast("Bem vindo!","success")
 
-            setTimeout(() => {
-                window.location.reload();
-            }, 500);
+            router.push("/projects/qrlink/dashboard");
 
         } catch (err) {
             showToast("Erro ao realizar login","error");

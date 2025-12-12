@@ -4,7 +4,7 @@ import Link from "next/link";
 const projects = [
   {
     id: "ecommerce-nextjs",
-    title: "E-commerce Moderno",
+    title: "QR Link Manager",
     description:
       "Plataforma completa de e-commerce construída com Next.js e Node.js, featuring carrinho de compras, pagamentos integrados e painel administrativo.",
     tech: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],

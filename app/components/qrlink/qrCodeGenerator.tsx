@@ -3,20 +3,8 @@
 import { useEffect, useRef } from "react";
 import { FiX, FiDownload } from "react-icons/fi";
 import { showToast } from "@/app/lib/toast-utils";
+import { QRCodeGeneratorProps } from "../../types/qrLinkType";
 
-interface LinkItem {
-  id: string;
-  title: string;
-  originalUrl: string;
-  shortUrl: string;
-  clicks: number;
-  createdAt: Date;
-}
-
-interface QRCodeGeneratorProps {
-  link: LinkItem;
-  onClose: () => void;
-}
 
 const QRCodeGenerator = ({ link, onClose }: QRCodeGeneratorProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
