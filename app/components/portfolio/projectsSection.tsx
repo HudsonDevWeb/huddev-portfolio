@@ -3,20 +3,19 @@ import Link from "next/link";
 
 const projects = [
   {
-    id: "ecommerce-nextjs",
-    title: "QR Link Manager",
-    description:
-      "Plataforma completa de e-commerce construída com Next.js e Node.js, featuring carrinho de compras, pagamentos integrados e painel administrativo.",
-    tech: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],
-    image: "/placeholder.svg",
-  },
-  {
     id: "inventory-management",
     title: "Sistema de Gestão de Inventário",
     description:
       "Sistema robusto para controle de estoque com relatórios em tempo real, alertas automatizados e integração com múltiplos fornecedores.",
     tech: ["Python", "MySQL", "React", "Docker"],
     image: "/placeholder.svg",
+  },
+  {
+    id: "qrlink/login",
+    title: "QR Link Manager",
+    description: "Crie e gerencie QR codes com links dinâmicos, oferecendo rastreamento detalhado de cliques e performance dos links encurtados.",
+    tech: ["Next.js","Google Sheets API","TypeScript"],
+    image: "/qrlink.png",
   },
   {
     id: "realtime-chat",
@@ -41,7 +40,7 @@ export function ProjectsSection() {
           {projects.map((project, index) => (
             <Link
               key={project.id}
-              href={`/project/${project.id}`}
+              href={`/projects/${project.id}`}
               className="group block animate-slide-up"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
@@ -50,9 +49,11 @@ export function ProjectsSection() {
                   <div className="relative aspect-video md:aspect-auto overflow-hidden bg-muted">
                     <div className="absolute inset-0 bg-linear-to-br from-foreground/5 to-foreground/10" />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="font-display text-6xl font-bold text-muted-foreground/20">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="object-cover"
+                      />
                     </div>
                   </div>
 

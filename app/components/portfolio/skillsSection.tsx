@@ -1,7 +1,7 @@
 "use client";
 
-import { FaNodeJs, FaReact, FaPython, FaJava, FaDocker, FaGit } from "react-icons/fa";
-import { SiNextdotjs, SiTypescript, SiMysql, SiMongodb, SiPostgresql, SiStrapi } from "react-icons/si";
+import { FaNodeJs, FaReact, FaPython, FaJava, FaDocker, FaAngular  } from "react-icons/fa";
+import { SiNextdotjs, SiTypescript, SiMysql, SiMongodb, SiPostgresql } from "react-icons/si";
 
 const skills = [
   { name: "Node.js", category: "Backend", icon: <FaNodeJs /> },
@@ -14,8 +14,8 @@ const skills = [
   { name: "React", category: "Frontend", icon: <FaReact /> },
   { name: "PostgreSQL", category: "Database", icon: <SiPostgresql /> },
   { name: "Docker", category: "DevOps", icon: <FaDocker /> },
-  { name: "Git", category: "Tools", icon: <FaGit /> },
-  { name: "REST APIs", category: "Backend", icon: <SiStrapi /> },
+  { name: "Angular", category: "Frontend", icon: <FaAngular /> },
+  { name: "React Native", category: "Mobile", icon: <FaReact /> },
 ];
 
 export function SkillsSection() {

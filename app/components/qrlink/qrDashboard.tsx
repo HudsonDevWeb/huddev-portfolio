@@ -219,7 +219,7 @@ const Dashboard = () => {
             <button
               onClick={handleCreateLink}
               disabled={loadingCreate}
-              className="bg-indigo-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 disabled:opacity-60"
+              className="bg-indigo-600 cursor-pointer text-white px-4 py-2 rounded-lg flex items-center gap-2 disabled:opacity-60"
             >
               {loadingCreate ? (
                 <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />

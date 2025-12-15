@@ -17,7 +17,7 @@ const QrLinkCard = ({ link, onDelete, onGenerateQR, style, deleting }: LinkCardP
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(`https://${link.shortUrl}`);
+      await navigator.clipboard.writeText(`http://localhost:3000/projects/qrlink/${link.shortUrl}`);
       setCopied(true);
       showToast("Link copiado para a área de transferência!", "success");
       setTimeout(() => setCopied(false), 2000);
