@@ -1,14 +1,15 @@
 import { LuArrowUpRight } from "react-icons/lu";
 import Link from "next/link";
+import { MinorProjects } from "./minorProjects";
 
 const projects = [
   {
     id: "inventory-management",
-    title: "Sistema de Gestão de Inventário",
+    title: "KutAgenda",
     description:
-      "Sistema robusto para controle de estoque com relatórios em tempo real, alertas automatizados e integração com múltiplos fornecedores.",
-    tech: ["Python", "MySQL", "React", "Docker"],
-    image: "/placeholder.svg",
+      "Sistema de agendamentos criado para organizar horários e compromissos, permitindo a gestão de clientes, servicos e agendamentos.",
+    tech: ["Next.js", "Node.js", "MongoDB", "TypeScript"],
+    image: "/KA.png",
   },
   {
     id: "qrlink/login",
@@ -29,7 +30,7 @@ const projects = [
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-32 bg-secondary/30">
+    <section id="projects" className="pt-32 bg-secondary/30">
       <div className="section-container">
         <p className="section-title">Projetos</p>
         <h2 className="text-4xl md:text-5xl font-display font-bold mb-16">
@@ -87,8 +88,10 @@ export function ProjectsSection() {
               </article>
             </Link>
           ))}
+          <MinorProjects/>
         </div>
       </div>
+
     </section>
   );
 }

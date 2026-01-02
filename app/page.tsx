@@ -4,6 +4,7 @@ import { SkillsSection } from "./components/portfolio/skillsSection";
 import { JourneySection } from "./components/portfolio/journeySection";
 import { ProjectsSection } from "./components/portfolio/projectsSection";
 import { Footer } from "./components/portfolio/footer";
+import { PortfolioCode } from "./components/portfolio/porfolioCode";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <SkillsSection/>
         <JourneySection/>
         <ProjectsSection/>
+        <PortfolioCode/>
       </main>
     <Footer/>
     </div>

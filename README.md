@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💻 Portfólio — Hudson Moreira
 
-## Getting Started
+Desenvolvido com **Next.js**, com o objetivo de apresentar minhas **experiências**, **vivências como programador**, **tecnologias que utilizo** e **projetos que desenvolvi ao longo da minha jornada**.
 
-First, run the development server:
+O portfólio foi pensado para ser simples, performático e direto, refletindo meu estilo de desenvolvimento e organização de código.
+
+---
+
+## 🚀 Sobre o Portfólio
+
+Neste portfólio você encontrará:
+
+- Minha trajetória e experiências como desenvolvedor
+- As principais **linguagens e tecnologias** que utilizo no dia a dia
+- Projetos pessoais e profissionais
+- Links para repositórios e demonstrações
+- Um layout moderno, responsivo e com código limpo
+
+Todo o código do portfólio é **open source** e está disponível neste repositório.
+
+---
+
+## 📂 Projetos em Destaque
+
+### 📅 Kutagenda
+Sistema de agendamentos criado por mim, pensado para facilitar a organização de horários e compromissos.
+
+**Funcionalidades:**
+- Gerenciamento de agendamentos
+- Organização por datas e horários
+- Interface simples e objetiva
+
+---
+
+### 🔗 QRLink
+Sistema desenvolvido para **gerenciamento de links e QR Codes**, com foco em controle e métricas.
+
+**Funcionalidades:**
+- Criação e gerenciamento de links
+- Geração de QR Codes
+- Rastreamento e contagem de cliques
+- Visualização de métricas
+
+---
+
+### 📱 App Mobile de Currículos
+Aplicativo mobile desenvolvido com **React Native** para criação de currículos de forma prática.
+
+**Funcionalidades:**
+- Criação e edição de currículos
+- Interface mobile intuitiva
+- Foco em usabilidade e simplicidade
+
+---
+
+## ▶️ Rodando o Projeto Localmente
+
+Caso queira rodar o portfólio localmente, siga os passos abaixo:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Instale as dependências
+pnpm install
+
+# Rode o projeto em modo desenvolvimento
 pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
