@@ -37,7 +37,7 @@ const minorProjects = [
     link: ""
   },
   {
-    id: "megazap-institucional",
+    id: "ultrafox-institucional",
     title: "Institucional Ultrafox",
     description: "Landing page institucional para a empresa Ultrafox.",
     tech: ["React", "TypeScript"],
@@ -79,7 +79,7 @@ export function MinorProjects() {
 
       <div
         className={`grid gap-4 mt-6  overflow-hidden transition-all duration-500 ${
-          open ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+          open ? "max-h-250 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         {minorProjects.map((project) => (
