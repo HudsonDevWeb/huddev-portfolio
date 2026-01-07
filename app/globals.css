@@ -23,6 +23,19 @@
   --color-input: #2D2D2D;
   --color-ring: #CCCCCC;
 
+  /*Cores - NebulaTrade*/
+  --color-nebula: #9E58E1;
+  --color-nebula-light: rgba(158,88,225,.1);
+  --color-nebula-lighter: rgba(158,88,225,.05);
+  --color-nebula-medium: rgba(158,88,225,.2);
+  --color-nebula-dark: rgba(158,88,225,.8);
+
+  --color-nebula-border: rgba(158,88,225,.15);
+  --color-nebula-glow: rgba(158,88,225,.35);
+
+  --color-nebula-text-primary: #1F2937;
+  --color-nebula-text-muted: #6B7280;
+  --color-nebula-text-light: #9CA3AF;
 }
 
 

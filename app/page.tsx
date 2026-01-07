@@ -1,10 +1,10 @@
-import { HeroSection } from "./components/portfolio/heroSession";
-import { Header } from "./components/portfolio/header";
-import { SkillsSection } from "./components/portfolio/skillsSection";
-import { JourneySection } from "./components/portfolio/journeySection";
-import { ProjectsSection } from "./components/portfolio/projectsSection";
-import { Footer } from "./components/portfolio/footer";
-import { PortfolioCode } from "./components/portfolio/porfolioCode";
+import { HeroSection } from "./components/Portfolio/heroSession";
+import { Header } from "./components/Portfolio/header";
+import { SkillsSection } from "./components/Portfolio/skillsSection";
+import { JourneySection } from "./components/Portfolio/journeySection";
+import { ProjectsSection } from "./components/Portfolio/projectsSection";
+import { Footer } from "./components/Portfolio/footer";
+import { PortfolioCode } from "./components/Portfolio/porfolioCode";
 
 export default function Home() {
   return (
