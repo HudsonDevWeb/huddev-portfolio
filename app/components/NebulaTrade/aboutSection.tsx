@@ -3,18 +3,6 @@
 import { FaRobot, FaBolt, FaShieldAlt, FaCogs } from "react-icons/fa";
 
 const AboutSection = () => {
-    const primaryColor = "#9E58E1";
-    const primaryLight = "rgba(158, 88, 225, 0.1)";
-    const primaryLighter = "rgba(158, 88, 225, 0.05)";
-    const primaryMedium = "rgba(158, 88, 225, 0.2)";
-    const primaryDark = "rgba(158, 88, 225, 0.8)";
-    const borderColor = "rgba(158, 88, 225, 0.15)";
-    const glowColor = "rgba(158, 88, 225, 0.35)";
-
-    const textPrimary = "#1F2937";
-    const textMuted = "#6B7280";
-    const textLight = "#9CA3AF"; 
-
     const highlights = [
         {
             icon: FaRobot,
@@ -39,178 +27,91 @@ const AboutSection = () => {
     ];
 
     return (
-        <section id="about" className="py-24 relative flex items-center justify-center bg-gray-950">
-            <div
-                className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full blur-[120px]"
-                style={{
-                    background: `radial-gradient(circle, ${primaryColor}30 0%, transparent 70%)`,
-                    opacity: 0.6
-                }}
-            />
-
-
-            <div
-                className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full blur-[80px]"
-                style={{
-                    backgroundColor: primaryLight
-                }}
-            />
-
-            <div
-                className="absolute top-20 right-1/4 w-[300px] h-[300px] rounded-full blur-[60px]"
-                style={{
-                    backgroundColor: primaryLight
-                }}
-            />
+        <section
+            id="about"
+            className="relative py-20 flex items-center justify-center bg-gray-950 overflow-hidden"
+        >
+            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-40 h-40 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full blur-[120px] bg-purple-600/30" />
+            <div className="absolute bottom-0 left-1/4 w-32 h-32 sm:w-48 sm:h-48 rounded-full blur-[80px] bg-purple-600/10" />
+            <div className="absolute top-20 right-1/4 w-24 h-24 sm:w-40 sm:h-40 rounded-full blur-[60px] bg-purple-600/10" />
 
             <div className="container px-4 relative z-10">
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-                        Por que <span
-                            style={{
-                                background: `linear-gradient(135deg, ${primaryColor}, #B36EF3)`,
-                                WebkitBackgroundClip: 'text',
-                                WebkitTextFillColor: 'transparent',
-                                backgroundClip: 'text',
-                                filter: `drop-shadow(0 0 20px ${primaryColor}40)`
-                            }}
-                        >NebulaTrade</span>?
+                        Por que{" "}
+                        <span className="bg-linear-to-br from-purple-400 to-purple-600 bg-clip-text text-transparent drop-shadow">
+                            NebulaTrade
+                        </span>
+                        ?
                     </h2>
-                    <p
-                        className="text-lg"
-                        style={{ color: '#E5E7EB' }}
-                    >
-                        NebulaTrade Bot é uma solução de trading automatizado baseada em Python que se conecta
-                        diretamente à API da Binance. Execute ordens de compra e venda automaticamente com base em
-                        estratégias configuráveis, com foco em performance, confiabilidade e segurança.
+
+                    <p className="text-lg text-gray-200">
+                        NebulaTrade Bot é uma solução de trading automatizado baseada em Python
+                        que se conecta diretamente à API da Binance, com foco em performance,
+                        confiabilidade e segurança.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {highlights.map((item, index) => (
                         <div
                             key={index}
-                            className="text-center group p-6 rounded-2xl transition-all hover:scale-105 hover:-translate-y-1"
-                            style={{
-                                background: `linear-gradient(145deg, ${primaryColor}15, ${primaryColor}08)`,
-                                border: `1px solid ${primaryMedium}`,
-                                boxShadow: `
-                  0 4px 20px ${primaryColor}15,
-                  0 8px 32px rgba(0, 0, 0, 0.1),
-                  inset 0 1px 0 ${primaryLight}
-                `,
-                                backdropFilter: 'blur(10px)'
-                            }}
+                            className="group text-center p-6 rounded-2xl border border-purple-500/20 bg-linear-to-br from-purple-500/10 to-purple-500/5 backdrop-blur-md transition-all hover:-translate-y-1 hover:scale-105 shadow-lg"
                         >
-                            <div
-                                className="w-14 h-14 mx-auto mb-4 rounded-xl flex items-center justify-center transition-all group-hover:scale-110 group-hover:rotate-3"
-                                style={{
-                                    background: `linear-gradient(135deg, ${primaryColor}30, ${primaryColor}10)`,
-                                    border: `1px solid ${primaryMedium}`
-                                }}
-                            >
-                                <item.icon
-                                    className="w-7 h-7 transition-transform group-hover:scale-110"
-                                    style={{ color: '#FFFFFF' }}
-                                />
+                            <div className="w-14 h-14 mx-auto mb-4 rounded-xl flex items-center justify-center bg-purple-500/20 border border-purple-500/30 transition-all group-hover:scale-110 group-hover:rotate-3">
+                                <item.icon className="w-7 h-7 text-white" />
                             </div>
-                            <h3 className="text-lg font-semibold mb-2 text-white">{item.title}</h3>
-                            <p
-                                className="text-sm"
-                                style={{ color: '#D1D5DB' }}
-                            >
+
+                            <h3 className="text-lg font-semibold mb-2 text-white">
+                                {item.title}
+                            </h3>
+
+                            <p className="text-sm text-gray-300">
                                 {item.description}
                             </p>
                         </div>
                     ))}
                 </div>
 
-                <div
-                    className="mt-16 rounded-2xl p-8 md:p-12"
-                    style={{
-                        background: `linear-gradient(145deg, ${primaryColor}15, ${primaryColor}08)`,
-                        border: `1px solid ${primaryMedium}`,
-                        boxShadow: `
-              0 8px 32px ${primaryColor}15,
-              0 20px 60px rgba(0, 0, 0, 0.2),
-              inset 0 1px 0 ${primaryLight}
-            `,
-                        backdropFilter: 'blur(10px)'
-                    }}
-                >
+                <div className="mt-16 rounded-2xl p-6 md:p-12 border border-purple-500/20 bg-linear-to-brfrom-purple-500/10 to-purple-500/5 backdrop-blur-md shadow-xl">
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div>
-                            <h3 className="text-2xl font-bold mb-4 text-white">Feito para Desenvolvedores e Traders</h3>
+                            <h3 className="text-2xl font-bold mb-4 text-white">
+                                Feito para Desenvolvedores e Traders
+                            </h3>
+
                             <ul className="space-y-3">
                                 {[
-                                    "Integração completa com API da Binance para trading spot",
-                                    "Ordens automáticas de compra e venda com suporte a stop-loss",
-                                    "Múltiplas estratégias pré-definidas ou crie a sua própria",
-                                    "Dados de mercado em tempo real e dashboard de analytics",
-                                    "Logging completo para histórico de trades e debugging"
+                                    "Integração completa com API da Binance",
+                                    "Ordens automáticas com stop-loss",
+                                    "Estratégias configuráveis",
+                                    "Dados em tempo real",
+                                    "Logging completo"
                                 ].map((item, index) => (
-                                    <li key={index} className="flex items-start gap-3">
-                                        <span
-                                            className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 animate-pulse"
-                                            style={{
-                                                backgroundColor: primaryColor,
-                                                boxShadow: `0 0 8px ${primaryColor}`
-                                            }}
-                                        />
-                                        <span style={{ color: '#E5E7EB' }}>{item}</span>
+                                    <li key={index} className="flex gap-3 items-start text-gray-200">
+                                        <span className="w-1.5 h-1.5 mt-2 rounded-full bg-purple-400 animate-pulse" />
+                                        {item}
                                     </li>
                                 ))}
                             </ul>
                         </div>
-                        <div
-                            className="p-6 font-mono text-sm rounded-xl overflow-hidden relative"
-                            style={{
-                                background: `linear-gradient(145deg, #1a1a2e, #16213e)`,
-                                border: `1px solid ${primaryMedium}`,
-                                boxShadow: `
-                  0 4px 20px rgba(0, 0, 0, 0.3),
-                  inset 0 1px 0 ${primaryLight}20
-                `
-                            }}
-                        >
-                            <div
-                                className="absolute -top-20 -right-20 w-40 h-40 rounded-full blur-[60px] opacity-30"
-                                style={{ backgroundColor: primaryColor }}
-                            />
 
-                            <div className="flex items-center gap-2 mb-4 pb-3 relative z-10" style={{ borderBottom: `1px solid ${primaryMedium}` }}>
-                                <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#ef4444' }} />
-                                <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#f59e0b' }} />
-                                <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#10b981' }} />
-                                <span
-                                    className="ml-2 text-xs"
-                                    style={{ color: textLight }}
-                                >
-                                    config.py
-                                </span>
+                        <div className="relative p-6 rounded-xl font-mono text-sm bg-linear-to-br from-gray-900 to-gray-800 border border-purple-500/20 overflow-hidden">
+                            <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-purple-500/30 blur-[60px]" />
+
+                            <div className="flex gap-2 mb-4 pb-3 border-b border-purple-500/20 relative z-10">
+                                <span className="w-3 h-3 rounded-full bg-red-500" />
+                                <span className="w-3 h-3 rounded-full bg-yellow-500" />
+                                <span className="w-3 h-3 rounded-full bg-green-500" />
+                                <span className="ml-2 text-xs text-gray-400">config.py</span>
                             </div>
-                            <pre className="overflow-x-auto relative z-10">
-                                <code>
-                                    <span style={{ color: primaryColor }}>PAR_NEGOCIACAO</span>
-                                    <span style={{ color: '#d1d5db' }}> = </span>
-                                    <span style={{ color: '#34d399' }}>"BTCUSDT"</span>
-                                    <br />
-                                    <span style={{ color: primaryColor }}>ESTRATEGIA</span>
-                                    <span style={{ color: '#d1d5db' }}> = </span>
-                                    <span style={{ color: '#34d399' }}>"momentum"</span>
-                                    <br />
-                                    <span style={{ color: primaryColor }}>NIVEL_RISCO</span>
-                                    <span style={{ color: '#d1d5db' }}> = </span>
-                                    <span style={{ color: '#a78bfa' }}>0.02</span>
-                                    <br />
-                                    <span style={{ color: primaryColor }}>STOP_LOSS</span>
-                                    <span style={{ color: '#d1d5db' }}> = </span>
-                                    <span style={{ color: '#a78bfa' }}>0.05</span>
-                                    <br />
-                                    <span style={{ color: primaryColor }}>TAKE_PROFIT</span>
-                                    <span style={{ color: '#d1d5db' }}> = </span>
-                                    <span style={{ color: '#a78bfa' }}>0.10</span>
-                                </code>
+
+                            <pre className="relative z-10 text-gray-200 overflow-x-auto">
+                                PAR_NEGOCIACAO = "BTCUSDT"
+                                ESTRATEGIA = "momentum"
+                                NIVEL_RISCO = 0.02
+                                STOP_LOSS = 0.05
+                                TAKE_PROFIT = 0.10
                             </pre>
                         </div>
                     </div>
